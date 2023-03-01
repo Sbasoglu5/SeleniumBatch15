@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 
 public class Task1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -20,9 +20,11 @@ public class Task1 {
         userValue.sendKeys("28");
         WebElement userValue2= driver.findElement(By.xpath("//input[@id='sum2']"));
         userValue2.sendKeys("2");
-        driver.findElement(By.xpath("//button[text()='Get Total']")).click();
+        WebElement total=driver.findElement(By.xpath("//button[text()='Get Total']"));
+        total.click();
 
-        System.out.println(By.xpath("//button[@onclick='return total()']"));
+        System.out.println(total.getText());
+
 
 
     }
