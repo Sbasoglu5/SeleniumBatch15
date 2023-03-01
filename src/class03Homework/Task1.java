@@ -20,10 +20,14 @@ public class Task1 {
         userValue.sendKeys("28");
         WebElement userValue2= driver.findElement(By.xpath("//input[@id='sum2']"));
         userValue2.sendKeys("2");
-        WebElement total=driver.findElement(By.xpath("//button[text()='Get Total']"));
-        total.click();
+        driver.findElement(By.xpath("//button[text()='Get Total']")).click();
+        List<WebElement> total= driver.findElements(By.xpath("//button[text()='Get Total']"));
+        for (WebElement t:total){
+            String sum=t.getAttribute("type");
+            System.out.println(sum);
+        }
 
-        System.out.println(total.getText());
+
 
 
 
