@@ -18,6 +18,6 @@ public class Task2 {
         driver.findElement(By.name("reg_email_confirmation__")).sendKeys("j.terry4569@gmail.com");
         driver.findElement(By.id("password_step_input")).sendKeys("th.123456789*^");
         driver.findElement(By.name("websubmit")).click();
-        driver.close();
+        //driver.close();
     }
 }
