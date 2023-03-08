@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.List;
+import java.util.*;
 
 
 public class Task1andTask2 {
@@ -27,9 +27,13 @@ public class Task1andTask2 {
         List<WebElement> list=driver.findElements(By.xpath("//input[contains(@class,'element')]"));
         for (WebElement checkList:list){
             String allOptions=checkList.getAttribute("value");
-            if (allOptions.equalsIgnoreCase("Option-1")){
+            if (allOptions.equalsIgnoreCase("Option-3")){
                 checkList.click();
             }
+            /*if (allOptions.equalsIgnoreCase("Option-1")||allOptions.equalsIgnoreCase("Option-2")){
+                checkList.click();
+            }*/
         }
+
     }
 }

@@ -32,7 +32,7 @@ public class radioBtns {
         }
 
         //check if the radio button is selected or not
-        isSelectedMale=maleBtn.isSelected(); // important bc if we don't rewrite it will print out the previous result which is false
+        isSelectedMale=maleBtn.isSelected(); // important! if we don't rewrite it will print out the previous result which is false
         System.out.println("the status of selection is "+isSelectedMale);
 
 
