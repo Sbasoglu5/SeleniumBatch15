@@ -27,7 +27,16 @@ public class WindowHandle {
         Set<String> windowHandles=driver.getWindowHandles();
         //print all handles
         for (String handles:windowHandles){
-            System.out.println(handles);
+            //switch the focus of the driver to help window
+            driver.switchTo().window(handles);
+            //check the title of the window to find our focus
+            String title= driver.getTitle();
+            if (title.equalsIgnoreCase("Privacy Policy – Privacy & Terms – Google")){
+                break;
+            }
         }
+        //to verify that we switched to the right window
+        System.out.println(driver.getTitle());
+        driver.switchTo().window(parentWindowHandle);
     }
 }
